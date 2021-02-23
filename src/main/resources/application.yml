@@ -1,6 +1,6 @@
-spring.cloud.config.uri: http://localhost:8888/application/dev
-management.endpoints.web.exposure.include: "*"
+spring.cloud.config.uri: http://localhost:8888
+management.endpoints.web.exposure.include: '*'
 spring.application.name: spring-cloud-config-client
-spring.profiles.active: dev
-
+#spring.profiles.active: dev
+server.port: 8081
 
