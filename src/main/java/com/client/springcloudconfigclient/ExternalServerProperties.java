@@ -2,11 +2,13 @@ package com.client.springcloudconfigclient;
 
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 @Configuration
 @ConfigurationProperties("server")
+@RefreshScope
 public class ExternalServerProperties {
 
     private String email;
