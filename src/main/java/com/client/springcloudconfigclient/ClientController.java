@@ -29,7 +29,11 @@ public class ClientController {
     @PostMapping(path="/post",consumes = "application/json",produces = "application/json")
     public ResponseEntity<String> postDetails(@RequestBody String data){
         logger.info("Received request :{}",data);
-        return new ResponseEntity<>(data, HttpStatus.CREATED);
+        ResponseEntity rs=new ResponseEntity<>(data, HttpStatus.OK);
+        //return new ResponseEntity<>(data, HttpStatus.OK);
+        logger.info("Generated Response : {} and HTTP Status code: {}",data,HttpStatus.OK);
+        return rs;
+
     }
 
 
